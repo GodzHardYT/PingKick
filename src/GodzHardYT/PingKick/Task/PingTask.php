@@ -4,6 +4,7 @@ namespace GodzHardYT\PingKick\Task;
 
 use GodzHardYT\PingKick\Main;
 use pocketmine\Player;
+use pocketmine\Server;
 use pocketmine\scheduler\Task;
 
 class PingTask extends Task {
@@ -18,10 +19,8 @@ class PingTask extends Task {
      * @inheritDoc
      */
     public function onRun(int $currentTick) {
-        foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
-            if ($player->getPing() >= $this->plugin->getConfig()->get("Ping-Kick")) {
-                $player->kick($this->plugin->getConfig()->get("Kick-Message"));
-            }
+        foreach (array_filter(Server::getInstance()->getOnlinePlayers(), function($player) {return $player->getPing() >= $this->plugin->getConfig()->get("Ping-Kick");}) as $player) {
+            $player->kick($this->plugin->getConfig()->get("Kick-Message"));
         }
     }
 
