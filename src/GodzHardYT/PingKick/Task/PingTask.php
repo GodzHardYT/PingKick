@@ -5,7 +5,6 @@ namespace GodzHardYT\PingKick\Task;
 use GodzHardYT\PingKick\Main;
 use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
-use pocketmine\network\mcpe\NetworkSession;
 
 class PingTask extends Task {
 
