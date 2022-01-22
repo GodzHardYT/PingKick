@@ -1,12 +1,15 @@
 #                           |------------------------------------------------------------|
 #                           |        Plugin created by WHiTeG0Dz_ and for support        |
-#                           | Contact me on telegram @GodzHardYT or Discord WHiTeG0Dz_#2791|
+#                           | Contact me on telegram @GodzHard or Discord WHiTeG0Dz_#2215|
 #                           |------------------------------------------------------------|
 
+#Choose how many tps the server should start pinging check players (this setting is to prevent players from kicking when the server starts lagging)
+tps-check: 19
+
 #Choose the ping of when a player should be kicked, (I recommend you put it above 2000)
-Ping-Kick: 2000
+ping-kick: 2000
 
 #Choose the kick message when a player is kicked for exceeding the ping limit
-Kick-Message: "§7You were kicked by the server for: you have exceeded the maximum ping!"
+kick-message: "§7You were kicked by the server for: you have exceeded the maximum ping!"
 
-#For my others plugin visit my profile on GitHub! https://github.com/GodzHardYT
+#For my other plugins visit my profile on GitHub! https://github.com/GodzHardYT
